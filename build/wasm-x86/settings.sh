@@ -36,7 +36,7 @@ export HEIF_OPTIONS="-DENABLE_MULTITHREADING_SUPPORT=false"
 export LCMS_OPTIONS="--without-threads"
 export OPENEXR_OPTIONS="-DZLIB_LIBRARY=/usr/local/lib/libz.a -DZLIB_INCLUDE_DIR=/usr/local/include -DImath_DIR=/usr/local/lib/cmake/Imath"
 export WEBP_OPTIONS=""
-export IMAGEMAGICK_OPTIONS="--disable-openmp --without-threads --without-bzlib --without-lzma"
+export IMAGEMAGICK_OPTIONS="--disable-openmp --without-threads --with-webp=yes --with-autotrace=no --with-bzlib=no --with-djvu=no --with-dps=no --with-fftw=no --with-flif=no --with-fpx=no --with-fontconfig=no --with-freetype=no --with-gslib=no --with-gvc=no --with-jbig=no --with-jpeg=no --with-jxl=no --with-dmr=no --with-lcms=no --with-lqr=no --with-ltdl=no --with-lzma=no --with-magick-plus-plus=no --with-openexr=no --with-openjp2=no --with-pango=no --with-perl=no --with-png=no --with-raqm=no --with-raw=no --with-rsvg=no --with-tiff=no --with-uhdr=no --with-wmf=no --with-x=no --with-xml=no --with-zip=no --with-zlib=no --with-zstd=no"
 
 # WASM options
 export CC=emcc
