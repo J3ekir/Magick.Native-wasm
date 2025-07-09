@@ -61,11 +61,11 @@ jobs:
       run: echo "version=wasm-v$(date +'%Y.%m.%d-%H.%M.%S')-UTC" >> $GITHUB_OUTPUT
 
     - name: Zip artifact
-      run: cd artifacts && zip -r -FS ../${{ steps.version.outputs.version }}.zip . --exclude '*/.*' '.*'
+      run: cd artifacts && zip -r -FS ../wasm-x86.zip . --exclude '*/.*' '.*'
 
     - name: Create GitHub release and upload artifacts
       uses: softprops/action-gh-release@v2
       with:
         tag_name: ${{ steps.version.outputs.version }}
         name: ${{ steps.version.outputs.version }}
-        files: ${{ steps.version.outputs.version }}.zip
+        files: wasm-x86.zip
